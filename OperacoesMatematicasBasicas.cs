@@ -1,0 +1,99 @@
+class Program
+{
+    static float Adicao(float num1, float num2)
+    {
+        float resultado = num1 + num2;
+        return resultado;
+    }
+    static float Subtracao(float num1, float num2)
+    {
+        float resultado = num1 - num2;
+        return resultado;
+    }
+    static float Multiplicacao(float num1, float num2)
+    {
+        float resultado = num1 * num2;
+        return resultado;
+    }
+    static float Divisao(float num1, float num2)
+    {
+        float resultado = num1 / num2;
+        return resultado;
+    }
+    static void Main(string[] args)
+    {
+        float num1 = 0, num2 = 0, x;
+        bool valido;
+        char opcao, continuar;
+
+        do //Deseja Continuar?
+        {
+            for (int i = 1; i < 3; i++)
+            {
+
+                do
+                {
+                    Console.Write($"Digite o {i}º número: ");
+                    valido = float.TryParse(Console.ReadLine(), out x);
+                    if (valido)
+                    {
+                        if (i == 1)
+                        {
+                            num1 = x;
+                        }
+                        else
+                        {
+                            num2 = x;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Apenas números :)");
+                        Console.WriteLine();
+                    }
+                }while(!valido);
+            }
+            
+            Console.WriteLine();
+            Console.WriteLine("A - Adição");
+            Console.WriteLine("B - Subtração");
+            Console.WriteLine("C - Multiplicação");
+            Console.WriteLine("D - Divisão");
+
+            do // Entrada e Validação da Opção
+            {
+                Console.Write("\nEscolha umas das opções acima: ");
+                valido = char.TryParse(Console.ReadLine().ToUpper(),out opcao);
+
+                if (!valido || opcao < 65 || opcao > 68) //Exceção Opções
+                {
+                    Console.WriteLine("\nDigite novamente, opções válidas: A, B, C ou D.");
+                    Console.WriteLine();
+                    valido = false;
+                }
+            } while (!valido);
+
+            switch ((int)opcao)
+            {
+                case 65: Console.WriteLine("\nO resultado da adição é: {0}", Adicao(num1, num2)); break;
+                case 66: Console.WriteLine("\nO resultado da subtração é: {0}", Subtracao(num1, num2)); break;
+                case 67: Console.WriteLine("\nO resultado da multiplicação é: {0}", Multiplicacao(num1, num2)); break;
+                case 68: Console.WriteLine("\nO resultado da multiplicação é: {0}", Divisao(num1, num2)); break;
+            }
+
+            Console.Write("\nVocê deseja reiniciar o programa? Digite S ou N: ");
+            do{
+                continuar = char.ToUpper(Console.ReadKey().KeyChar);
+
+                if (continuar != 'S' && continuar != 'N')
+                {
+                    Console.WriteLine("Escolha S ou N.");
+                    Console.WriteLine();
+                    valido = false;
+                }
+            } while (!valido);
+        } while (continuar == 1);
+
+        Console.WriteLine("Encerrando...");
+    }
+}
