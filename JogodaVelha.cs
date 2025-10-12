@@ -1,195 +1,132 @@
-﻿Console.Write("<----Jogo da Velha---->");
-Console.WriteLine("\n");
-
-int[,] jogo = new int[3, 3]
+class Program
 {
-    { 2,9,4 },
-    { 7,5,3 },
-    { 6,1,8 }
-};
-int[,] historico = new int[3, 3]
-{
-    { 0,0,0 },
-    { 0,0,0 },
-    { 0,0,0 }
-};
-int[,] user1 = new int[3, 3]
-{
-    { 0,0,0 },
-    { 0,0,0 },
-    { 0,0,0 }
-};
-int[,] user2 = new int[3, 3]
-{
-    { 0,0,0 },
-    { 0,0,0 },
-    { 0,0,0 }
-};
-int x = 0, y = 0; //Posição
-int jogador = 1, somaL = 0, somaC = 0;
-int q1 = 0, q2 = 0;//Quantidade de jogadas do jogador
-bool valido, vitoria = false;
-
-do
-{
-    //---JOGADOR 1---
-    //EXIBICAO DO JOGO
-    for (x = 0; x < 3; x++)
+    class JogoVelha
     {
-        for (y = 0; y < 3; y++)
+        private char[,] jogo = new char[3, 3];
+        private int[,] user1 = new int[3, 3];
+        private int[,] user2 = new int[3, 3];
+        private char[] valoresIniciais = { '2', '9', '4', '7', '5', '3', '6', '1', '8' };
+        public JogoVelha()
         {
-            Console.Write("{0} ", historico[x, y]);
-        }
-        Console.WriteLine();
-    }
+            int x, y;
+            int i = 0; //controlador do array valoresIniciais
 
-    //Já foi escolhido antes??
-    do
-    {
-        //Validação da Posição a Jogar
-        do
-        {
-            Console.Write("\nJogador {0}, digite a linha: ", jogador);
-            valido = int.TryParse(Console.ReadLine(), out x);
-
-            if (!valido || x <= 0 || x > 3)
-            {
-                Console.WriteLine("Caractere não permitido, opção 1, 2 ou 3.");
-                Console.WriteLine();
-            }
-        } while (!valido);
-
-        do
-        {
-            Console.Write("Jogador {0}, digite a coluna: ", jogador);
-            valido = int.TryParse(Console.ReadLine(), out y);
-
-            if (!valido || y <= 0 || y > 3)
-            {
-                Console.WriteLine("Caractere não permitido, opção 1, 2 ou 3.");
-                Console.WriteLine();
-            }
-        } while (!valido);
-
-        x--;
-        y--;
-        if (historico[x, y] != 0)
-        {
-            Console.WriteLine("\nLocal já foi escolhido, tente novamente.");
-        }
-    } while (historico[x, y] != 0);
-    q1++;
-    jogador++;
-    historico[x, y] = 1;
-    user1[x, y] = jogo[x, y];
-
-    //A partir de três entradas, verificar a soma
-    if (q1 >= 3)
-    {
-        //fechou na linha?
-        for (x = 0; x < 3; x++)
-        {
-            somaL = 0;
-            for (y = 0; y < 3; y++)
-            {
-                somaL += user1[x, y];
-            }
-            if (somaL == 15)
-            {
-                vitoria = true;
-            }
-        }
-        //fechou na coluna?
-        for (y = 0; y < 3; y++)
-        {
-            somaC = 0;
+            //recebendo os valores para o jogo da velha
             for (x = 0; x < 3; x++)
             {
-                somaC += user1[x, y];
+                for (y = 0; y < 3; y++)
+                {
+                    jogo[x, y] = valoresIniciais[i];
+                    i++;
+                }
             }
-            if (somaC == 15)
-            {
-                vitoria = true;
-            }
-        }
-        //fechou as diagonais??
-        if (user1[0, 0] + user1[1, 1] + user1[2, 2] == 15 || user1[2, 0] + user1[1, 1] + user1[0, 2] == 15)
-        {
-            vitoria = true;
-        }
-    }
 
-    //-----------------------------
-    if (!vitoria && q1 <= 4)
-    {
-        //---JOGADOR 2---
-        Console.WriteLine();
-        //EXIBICAO DA JOGO
-        for (x = 0; x < 3; x++)
-        {
-            for (y = 0; y < 3; y++)
+            //setando 0 por padrão nas matrizes dos usuários
+            for (x = 0; x < 3; x++)
             {
-                Console.Write("{0} ", historico[x, y]);
+                for (y = 0; y < 3; y++)
+                {
+                    user1[x, y] = 0;
+                    user2[x, y] = 0;
+                }
             }
+
+        }
+        public void Exibir()
+        {
+            int x, y;
+
+            Console.Clear();
+            Console.WriteLine("<------ Jogo da Velha ------>");
+            Console.WriteLine("Jogador 1 = X | Jogador 2 = O");
+            Console.WriteLine();
+
+            for (x = 0; x < 3; x++)
+            {
+                for (y = 0; y < 3; y++)
+                {
+                    char c = jogo[x, y];
+                    switch (c) // muda a cor dependendo do caractere
+                    {
+                        case 'X': Console.ForegroundColor = ConsoleColor.Red; ; break;
+                        case 'O': Console.ForegroundColor = ConsoleColor.Blue; break;
+                        default: Console.ForegroundColor = ConsoleColor.White; break;
+                    }
+                    Console.Write($"{c} ");
+                }
+                Console.WriteLine();
+            }
+            Console.ResetColor();
             Console.WriteLine();
         }
-        //Já foi escolhido antes??
-        do
+        public bool ValidaEntrada(int num_jogador)
         {
-            //Validação da Posição a Jogar
-            do
+            bool entradaValida;
+            char posicao;
+            int numero;
+
+            Console.Write("[Jogador {0}] Digite o número correspondente à posição desejada: ", num_jogador);
+
+            do//validando a entrada do jogador
             {
-                Console.Write("\nJogador {0}, digite a linha: ", jogador);
-
-                valido = int.TryParse(Console.ReadLine(), out x);
-
-                if (!valido || x <= 0 || x > 3)
+                posicao = char.ToUpper(Console.ReadKey().KeyChar);
+                if (posicao >= '1' && posicao <= '9')
                 {
-                    Console.WriteLine("Caractere não permitido, opção 1, 2 ou 3.");
-                    Console.WriteLine();
-
+                    entradaValida = true;
                 }
-            } while (!valido);
-            do
-            {
-                Console.Write("Jogador {0}, digite a coluna: ", jogador);
-
-                valido = int.TryParse(Console.ReadLine(), out y);
-
-                if (!valido || y <= 0 || y > 3)
+                else
                 {
-                    Console.WriteLine("Caractere não permitido, opção 1, 2 ou 3.");
-                    Console.WriteLine();
+                    Console.WriteLine("\nEntrada não é válida. Digite um dos números (1 à 9) correspondentes à posição desejada que ainda não foi escolhida");
+                    entradaValida = false;
                 }
-            } while (!valido);
+            } while (!entradaValida);
 
-            x--;
-            y--;
-            if (historico[x, y] != 0)
+            //posicao já foi ocupada?
+            for (int x = 0; x < 3; x++)
             {
-                Console.WriteLine("\nLocal já foi escolhido, tente novamente.");
+                for (int y = 0; y < 3; y++)
+                {
+                    if (jogo[x, y] == posicao) //se não foi ocupada, prossiga...
+                    {
+                        numero = posicao - '0'; //convertendo o número para armazenar
+                        ArmazenaJogada(num_jogador, numero, x, y);
+                        return true;
+                    }
+                }
             }
-        } while (historico[x, y] != 0);
 
-        q2++;
-        jogador--;
-        historico[x, y] = 2;
-        user2[x, y] = jogo[x, y];
-
-        //A partir de três entradas, verificar a soma
-        if (q2 >= 3)
+            return false;//se chegou aqui, já foi ocupada, repita a entrada
+        }
+        private void ArmazenaJogada(int num_jogador, int numero, int x, int y)
         {
+            if (num_jogador == 1)
+            {
+                user1[x, y] = numero;
+                jogo[x, y] = 'X';
+            }
+            else
+            {
+                user2[x, y] = numero;
+                jogo[x, y] = 'O';
+            }
+        }
+        public bool ValidaVitoria(int num_jogador)
+        {
+            int[,] usuario = (num_jogador == 1) ? user1 : user2;
+            int somaL, somaC; //somatórias de linhas e coluna
+            int x, y;
+
             //fechou na linha?
             for (x = 0; x < 3; x++)
             {
                 somaL = 0;
                 for (y = 0; y < 3; y++)
                 {
-                    somaL += user2[x, y];
+                    somaL += usuario[x, y];
                 }
                 if (somaL == 15)
                 {
-                    vitoria = true;
+                    return true;
                 }
             }
 
@@ -199,56 +136,112 @@ do
                 somaC = 0;
                 for (x = 0; x < 3; x++)
                 {
-                    somaC += user2[x, y];
+                    somaC += usuario[x, y];
                 }
                 if (somaC == 15)
                 {
-                    vitoria = true;
+                    return true;
                 }
-            }
-            //fechou pelas diagonais
-            if (user2[0, 0] + user2[1, 1] + user2[2, 2] == 15 || user2[2, 0] + user2[1, 1] + user2[0, 2] == 15)
-            {
-                vitoria = true;
             }
 
-            if (vitoria == true)
+            //fechou as diagonais??
+            if (usuario[0, 0] + usuario[1, 1] + usuario[2, 2] == 15 || usuario[2, 0] + usuario[1, 1] + usuario[0, 2] == 15)
             {
-                Console.WriteLine();
-                //RESULTADO FINAL
-                for (x = 0; x < 3; x++)
-                {
-                    for (y = 0; y < 3; y++)
-                    {
-                        Console.Write("{0} ", historico[x, y]);
-                    }
-                    Console.WriteLine();
-                }
-                Console.WriteLine("\nJogador 2 venceu!!");
-                break;
+                return true;
             }
+
+            //ainda não tem vencedor?
+            return false;
         }
-        Console.WriteLine();
-    }
-    else if (vitoria == true)
-    {
-        Console.WriteLine();
-        //RESULTADO FINAL
-        for (x = 0; x < 3; x++)
+        public bool Reiniciar()
         {
-            for (y = 0; y < 3; y++)
+            char reiniciar;
+            bool validaReiniciar;
+
+            Console.WriteLine("\nDeseja continuar? Digite S ou N");
+            do
             {
-                Console.Write("{0} ", historico[x, y]);
+                reiniciar = char.ToUpper(Console.ReadKey().KeyChar);
+                if (reiniciar == 'S' || reiniciar == 'N')
+                {
+                    validaReiniciar = true;
+                }
+                else
+                {
+                    validaReiniciar = false;
+                    Console.WriteLine();
+                    Console.WriteLine("\nValor inválido!! Escolhe 'S' para sim ou 'N' para não");
+                }
+            } while (!validaReiniciar);
+
+            switch (reiniciar)
+            {
+                case 'S': return true;
+                default: return false;
             }
-            Console.WriteLine();
         }
-        Console.WriteLine("\nJogador 1 venceu!!");
-        break;
     }
-    else
+
+    static void Main(string[] args)
     {
+        bool validaPosicao, reiniciar = true;
+        int jogadas, n;
+
+        while (reiniciar)
+        {
+            jogadas = 1;
+            n = 1;
+            JogoVelha jogador = new();
+
+            while (jogadas <= 9)
+            {
+                do
+                {
+                    jogador.Exibir();
+                    validaPosicao = jogador.ValidaEntrada(n);
+
+                    if (!validaPosicao)
+                    {
+                        Console.Write("\nEssa posição já ocupada. Pressione Enter e tente novamente");
+                        Console.ReadKey();
+                    }
+                } while (!validaPosicao);
+
+                jogadas++;
+
+                if (jogador.ValidaVitoria(n))
+                {
+                    jogador.Exibir(); //placar atualizado
+                    Console.Write("Jogador {0} venceu!!", n);
+                    jogadas = 10; //sair do loop ou break
+                }
+                else if (jogadas <= 9)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("\nSua jogada foi computada!!");
+                    Console.Write("Pressione Enter para continuar...");
+                    Console.ReadKey();
+
+                    if (jogadas % 2 == 1) //controle de jogador 1 ou 2
+                    {
+                        n = 1;
+                    }
+                    else
+                    {
+                        n = 2;
+                    }
+                }
+                else
+                {
+                    jogador.Exibir(); //placar atualizado
+                    Console.WriteLine("Vish!! Deu velha");
+                    jogadas = 10; //sair do loop ou break
+                }
+            }
+
+            reiniciar = jogador.Reiniciar();
+        }
         Console.WriteLine();
-        Console.WriteLine("Vish!! Deu velha.");
-        break;
+        Console.WriteLine("\nPrograma encerrado");
     }
-} while (!vitoria);
+}
