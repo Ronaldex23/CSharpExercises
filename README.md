@@ -22,7 +22,6 @@ Ao abrir cada pasta, você encontrará:
 - **Versionamento:** conforme necessidade, tenho realizado alguns commits para melhorias dos exercícios.
 
 ## 🚀Agora é sua vez, teste e execute
-{#agora-é-sua-vez-teste-e-execute}
 > 🔧 Pré-requisitos: Certifique-se de ter instalado em sua máquina:
 > - **Visual Studio 2022** (Community Edition é gratuita): Baixe em [visualstudio.microsoft.com](https://visualstudio.microsoft.com/pt-br/downloads/).
 > - **.NET SDK 6.0 ou superior**: Incluído no VS, mas verifique com `dotnet --version` no terminal.
