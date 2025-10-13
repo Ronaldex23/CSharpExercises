@@ -4,18 +4,18 @@
 
 ---
 ## 📋 Sumário
-- [Estrutura Básica de cada Exercício](#-estrutura-básica-de-cada-exercício)
-- [O que tenho aprendido](#o-que-tenho-aprendido)
-- [Como Executar os Exercícios](#como-executar-os-exercícios)
-- [Contribuições e Licença](#contribuições-e-licença)
+- [Estrutura Básica de cada Exercício](#estrutura-básica-de-cada-exercício)
+- [O que tenho aprendido?](#o-que-tenho-aprendido)
+- [Agora é sua vez, teste e execute](#agora-é-sua-vez-teste-e-execute)
+- [Contribuições e licença](#contribuições-e-licença)
 
-## ⚙️Estrutura Básica de cada Exercício
+## ⚙️Estrutura Básica de cada Exercício {#estrutura-básica-de-cada-exercício}
 Ao abrir cada pasta, você encontrará:  
 - `Exercise-Name.cs`: arquivo com o código.
 - `Exercise-Name.csproj`: projeto .NET console pronto para execução no Visual Studio 2022.
-- Cada exercício contém um `README.md` para facilitar o entendimento e compreensão da proposição realizada.
+- `README.md`: Explicação detalhada da proposição do exercício, incluindo objetivos e exemplos de saída.
 
-## 📚O que tenho aprendido?
+## 📚O que tenho aprendido? {#o-que-tenho-aprendido}
 
 ### Paradigmas e Abordagens
 1. Programação Modular (procedural)
@@ -27,7 +27,7 @@ Ao abrir cada pasta, você encontrará:
 - **Validação de entrada:** evitar exceções por entradas inválidas (use `int.TryParse`, `decimal.TryParse` etc.).
 - **Versionamento:** conforme necessidade, tenho realizado alguns commits para melhorias dos exercícios.
 
-## 🚀Agora é sua vez, teste e execute
+## 🚀Agora é sua vez, teste e execute {#agora-é-sua-vez-teste-e-execute}
 > 🔧 Pré-requisitos: Certifique-se de ter instalado em sua máquina:
 > - **Visual Studio 2022** (Community Edition é gratuita): Baixe em [visualstudio.microsoft.com](https://visualstudio.microsoft.com/pt-br/downloads/).
 > - **.NET SDK 6.0 ou superior**: Incluído no VS, mas verifique com `dotnet --version` no terminal.
@@ -42,7 +42,7 @@ Ao abrir cada pasta, você encontrará:
 3. **Executar em modo console**
    - Pressione `F5` para executar com depuração (abre o console e permite breakpoints).
   
-## 🤝 Contribuições e Licença
+## 🤝 Contribuições e licença {#contribuições-e-licença}
 - **Contribuições**: Sinta-se à vontade para abrir issues com sugestões ou pull requests com melhorias. Todos os exercícios são open-source!
 - **Licença**: Este repositório está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
 - **Contato**: Dúvidas? Abra uma issue ou me envie um e-mail em [ronaldo.reboucas07@gmail.com].
