@@ -131,6 +131,7 @@ GET https://viacep.com.br/ws/{CEP}/json/
 ### Pré-requisitos
  
 - [Visual Studio](https://visualstudio.microsoft.com/) com suporte a **Windows Forms (.NET)**
+- [Git](https://git-scm.com/install/)
 - Pacote NuGet `Newtonsoft.Json`
  
 ### Passos
