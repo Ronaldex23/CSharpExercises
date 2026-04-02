@@ -1,0 +1,39 @@
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.AssemblyReference.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.GenerateResource.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.AssemblyInfoInputs.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.AssemblyInfo.cs
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.CoreCompileInputs.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.exe
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.deps.json
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.runtimeconfig.json
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.pdb
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform .D3D6E94A.Up2Date
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\refint\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.pdb
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.genruntimeconfig.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\ref\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\Winform ConsultaCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform_ConsultaCEP.ConsultadorCepIHM.resources
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.exe
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.deps.json
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.runtimeconfig.json
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Winform ConsultaCEP.pdb
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.AssemblyReference.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform_ConsultaCEP.ConsultadorCepIHM.resources
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.GenerateResource.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.AssemblyInfoInputs.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.AssemblyInfo.cs
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.csproj.CoreCompileInputs.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.sourcelink.json
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform .D3D6E94A.Up2Date
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\refint\Winform ConsultaCEP.dll
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.pdb
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\Winform ConsultaCEP.genruntimeconfig.cache
+C:\Users\Ronaldo Brasil\OneDrive\Área de Trabalho\CSharpExercises\ConsultadorCEP\Winform ConsultaCEP\obj\Debug\net8.0-windows\ref\Winform ConsultaCEP.dll
